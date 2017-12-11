@@ -1,8 +1,7 @@
+import com.dank.contexts.JPAMemeContext;
+import com.dank.contexts.MemeContext;
 import com.google.inject.AbstractModule;
-import com.knoldus.dao.EmployeeDao;
-import com.knoldus.dao.impl.EmployeeDaoImpl;
-import com.knoldus.service.EmployeeService;
-import com.knoldus.service.impl.EmployeeServiceImpl;
+import com.dank.repositories.MemeRepository;
 
 /**
  * This class is a Guice module that tells Guice how to bind several
@@ -18,8 +17,8 @@ public class Module extends AbstractModule {
 
     @Override
     public void configure() {
-        bind(EmployeeService.class).to(EmployeeServiceImpl.class);
-        bind(EmployeeDao.class).to(EmployeeDaoImpl.class);
+        bind(MemeRepository.class);
+        bind(MemeContext.class).to(JPAMemeContext.class);
     }
 
 }

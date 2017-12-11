@@ -1,9 +1,9 @@
-2017-11-28 15:17:03,381 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2017-11-28 15:17:03,526 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
-2017-11-28 15:17:03,540 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
-2017-11-28 15:17:03,870 [ERROR] from application in netty-event-loop-3 - 
+2017-12-11 14:59:09,799 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2017-12-11 14:59:09,927 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
+2017-12-11 14:59:09,941 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
+2017-12-11 14:59:10,266 [ERROR] from application in netty-event-loop-3 - 
 
-! @7663k1loj - Internal server error, for (GET) [/] ->
+! @769k5g20k - Internal server error, for (GET) [/new?name=Vai&url=http://vaipaidcams.com] ->
  
 play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
 	at play.api.db.evolutions.ApplicationEvolutions$$anonfun$play$api$db$evolutions$ApplicationEvolutions$$runEvolutions$1.apply$mcV$sp(ApplicationEvolutions.scala:77)
@@ -55,8 +55,8 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
-2017-11-28 15:17:09,242 [INFO] from application in ForkJoinPool-1-worker-1 - Shutting down connection pool.
-2017-11-28 15:17:09,333 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2017-11-28 15:17:09,334 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
-2017-11-28 15:17:09,335 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
-2017-11-28 15:17:10,464 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2017-12-11 14:59:14,023 [INFO] from application in ForkJoinPool-1-worker-1 - Shutting down connection pool.
+2017-12-11 14:59:14,101 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2017-12-11 14:59:14,102 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
+2017-12-11 14:59:14,103 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
+2017-12-11 14:59:15,379 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
