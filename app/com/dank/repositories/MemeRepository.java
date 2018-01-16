@@ -25,4 +25,6 @@ public class MemeRepository {
  public List<Meme> findAllMemes() {
     return memeContext.findAll();
   }
+
+  public Meme findMeme(int id) { return memeContext.findOne(id); }
 }

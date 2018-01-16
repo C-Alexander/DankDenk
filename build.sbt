@@ -16,7 +16,9 @@ libraryDependencies ++= Seq(
   javaWs,
   "org.hibernate" % "hibernate-entitymanager" % "5.2.5.Final" exclude("dom4j", "dom4j"),
   "mysql" % "mysql-connector-java" % "6.0.5",
-  "dom4j" % "dom4j" % "1.6.1" intransitive()
+  "dom4j" % "dom4j" % "1.6.1" intransitive(),
+  "com.google.code.gson" % "gson" % "1.7.1",
+  "org.jasypt" % "jasypt" % "1.9.2"
 )
 
 libraryDependencies += evolutions

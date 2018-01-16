@@ -8,4 +8,6 @@ public interface MemeContext {
     void save(Meme m);
 
     List<Meme> findAll();
+
+    Meme findOne(int id);
 }

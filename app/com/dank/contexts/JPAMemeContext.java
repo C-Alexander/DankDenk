@@ -5,6 +5,7 @@ import play.db.jpa.JPAApi;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.List;
 
 
@@ -31,4 +32,12 @@ public class JPAMemeContext implements MemeContext {
         return getEntityManager().createNamedQuery("Meme.getAll", Meme.class)
                 .getResultList();
     }
+
+    @Override
+    public Meme findOne(int id) {
+        Query q = getEntityManager().createNamedQuery("Meme.findOne", Meme.class);
+        q.setParameter("id", id);
+        return (Meme)q.getSingleResult();
     }
+
+}

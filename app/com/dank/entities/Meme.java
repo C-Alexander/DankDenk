@@ -7,7 +7,8 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Meme.getAll", query = "select m from Meme as m")
+        @NamedQuery(name = "Meme.getAll", query = "select m from Meme as m"),
+        @NamedQuery(name = "Meme.findOne", query = "select m from Meme as m WHERE m.id = :id")
 })
 @Inheritance(strategy= InheritanceType.SINGLE_TABLE)
 public class Meme {
