@@ -1,6 +1,9 @@
 package com.dank.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 import static javax.persistence.FetchType.LAZY;
@@ -8,13 +11,18 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "category")
+@NamedQueries({
+        @NamedQuery(name = "Category.findByName", query = "select c from Category as c WHERE c.name = :name")
+})
 public class Category {
   @Id @GeneratedValue(strategy = IDENTITY)
   private Integer id;
   private String name;
   private String description;
-//  @OneToMany(fetch = LAZY, mappedBy = "category")
-//  private Set<Meme> memes;
+  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "category")
+  @JsonBackReference
+ // @JoinColumn(name = "id", referencedColumnName = "categoryId")
+  private List<Meme> memes;
 
   public Integer getId() {
     return id;
@@ -40,11 +48,11 @@ public class Category {
     this.description = description;
   }
 
-//  public Set<Meme> getMemes() {
-//    return memes;
-//  }
-//
-//  public void setMemes(Set<Meme> memes) {
-//    this.memes = memes;
-//  }
+  public List<Meme> getMemes() {
+    return memes;
+  }
+
+  public void setMemes(List<Meme> memes) {
+    this.memes = memes;
+  }
 }

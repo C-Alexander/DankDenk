@@ -13,6 +13,7 @@ CREATE TABLE `meme` (
   `url` varchar(255) DEFAULT NULL,
   `price` float DEFAULT NULL,
   `DTYPE` varchar(30) DEFAULT 'Meme',
+  `categoryId` int(11) DEFAULT 1,
 --   `cat_id` int(11) DEFAULT NULL,
   CONSTRAINT pk_meme PRIMARY KEY (`id`)
 );

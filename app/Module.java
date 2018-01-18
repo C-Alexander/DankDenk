@@ -1,5 +1,8 @@
+import com.dank.contexts.CategoryContext;
+import com.dank.contexts.JPACategoryContext;
 import com.dank.contexts.JPAMemeContext;
 import com.dank.contexts.MemeContext;
+import com.dank.repositories.CategoryRepository;
 import com.google.inject.AbstractModule;
 import com.dank.repositories.MemeRepository;
 
@@ -19,6 +22,8 @@ public class Module extends AbstractModule {
     public void configure() {
         bind(MemeRepository.class);
         bind(MemeContext.class).to(JPAMemeContext.class);
+        bind(CategoryRepository.class);
+        bind(CategoryContext.class).to(JPACategoryContext.class);
     }
 
 }

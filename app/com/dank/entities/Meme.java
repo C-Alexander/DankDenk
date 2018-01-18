@@ -1,6 +1,10 @@
 package com.dank.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
+
+import java.util.Locale;
 
 import static javax.persistence.FetchType.LAZY;
 import static javax.persistence.GenerationType.IDENTITY;
@@ -16,9 +20,10 @@ public class Meme {
   private Integer id;
   private String name;
   private String url;
-//  @ManyToOne(fetch = LAZY, cascade = CascadeType.ALL)
-//  @JoinColumn(name = "cat_id")
-//  private Category category;
+  @ManyToOne
+  @JoinColumn(name = "categoryId")
+  @JsonManagedReference
+  private Category category;
 
   public Integer getId() {
     return id;
@@ -44,11 +49,11 @@ public class Meme {
     this.url = url;
   }
 
-//  public Category getCategory() {
-//    return category;
-//  }
+  public Category getCategory() {
+    return category;
+  }
 
-//  public void setCategory(Category category) {
-//    this.category = category;
-//  }
+  public void setCategory(Category category) {
+    this.category = category;
+  }
 }
